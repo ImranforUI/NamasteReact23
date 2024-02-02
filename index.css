@@ -1,3 +1,28 @@
-#heading{
-    color: red;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add these styles to your existing CSS file or create a new one */
+
+.shimmer-wrapper {
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50px;
+  }
+  
+  .shimmer {
+    width: 250px;
+    height: 500px;
+    margin: 10px;
+    background: linear-gradient(300deg, #eee 25%, #ddd 50%, #eee 75%);
+    background-size: 200% 100%;
+    animation: shimmer-animation 1s infinite;
+  }
+  
+  @keyframes shimmer-animation {
+    to {
+      background-position: -200% 0;
+    }
+  }
+  
